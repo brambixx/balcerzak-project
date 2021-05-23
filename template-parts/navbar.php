@@ -9,7 +9,16 @@
            <img src="<?php echo $image[0]?>" alt="Trust My Project" class="logo__image">
         </div>
         <div class="navbar__buttons">
-            <h3>Navigation</h3>
+        <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'Główne menu',
+                        'container' => '',
+                        'items_wrap' => '<ul id="" class="nav__links">%3$s</ul>',
+                        'add_li_class' => 'nav__buttons'
+                    )
+                )
+              ?>
         </div>
     </div>
 </nav>
