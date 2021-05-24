@@ -51,7 +51,11 @@ strong {
   width: 100%;
   background-color: #111235;
   height: 100px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99; }
   .navbar .container {
     display: flex;
     justify-content: space-between;
@@ -460,6 +464,68 @@ a {
   .blog .container .blog__btn {
     margin-top: 10px;
     margin-bottom: 30px; } }
+
+@media screen and (min-width: 768px) {
+  .navbar .navbar__buttons {
+    display: flex; }
+  .navbar .navbar__mobile {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    transition: .5s; }
+    .navbar .navbar__buttons {
+      display: none; }
+    .navbar .navbar__mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      flex-direction: column;
+      position: absolute;
+      right: 20px;
+      top: 30px; }
+      .navbar .navbar__mobile:hover {
+        cursor: pointer; }
+      .navbar .navbar__mobile span {
+        transition: .3s;
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        margin: 5px; }
+    .navbar .expanded span:nth-child(1) {
+      transform: translateY(20px) rotate(45deg); }
+    .navbar .expanded span:nth-child(2) {
+      opacity: 0; }
+    .navbar .expanded span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg); }
+  .mobile_menu {
+    height: 100vh !important;
+    background-color: #47BFA4; }
+    .mobile_menu .container {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%; }
+      .mobile_menu .container .navbar__logo {
+        width: 100%; }
+        .mobile_menu .container .navbar__logo a {
+          margin: 0 auto;
+          display: flex; }
+        .mobile_menu .container .navbar__logo img {
+          margin: 0 auto; }
+      .mobile_menu .container .navbar__buttons {
+        display: flex; }
+        .mobile_menu .container .navbar__buttons .nav__links {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          padding-left: 0px;
+          text-align: center; }
+          .mobile_menu .container .navbar__buttons .nav__links li {
+            margin: 9px 0px; }
+            .mobile_menu .container .navbar__buttons .nav__links li a {
+              font-size: 26px; } }
 
 @media screen and (max-width: 567px) {
   .header .container .header__welcome .header__btn button {
