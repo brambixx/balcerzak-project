@@ -6,7 +6,9 @@
 <nav class="navbar">
     <div class="container">
         <div class="navbar__logo">
-           <img src="<?php echo $image[0]?>" alt="Trust My Project" class="logo__image">
+           <a href="<?php echo get_site_url()?>"> 
+                <img src="<?php echo $image[0]?>" alt="Trust My Project" class="logo__image">
+</a>
         </div>
         <div class="navbar__buttons">
         <?php
@@ -19,6 +21,11 @@
                     )
                 )
               ?>
+        </div>
+        <div class="navbar__mobile">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </nav>
