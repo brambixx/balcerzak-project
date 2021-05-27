@@ -15,9 +15,10 @@
                 <h1>
                     <?php the_title();?>
                 </h1>
-                <h2>
+                <div class="article__subtitle">
                     <?php echo get_field('subtitle');?>
-                </h2>
+                </div>
+                
             </div>
             <div class="article__text">
                 <div class="article__post">

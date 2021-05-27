@@ -5,8 +5,12 @@
     .container {
         flex-direction: column;
         .articles__start {
+            h1 {
+                font-size: 86px;
+            }
             h2 {
-                max-width: 700px;
+                max-width: 731px;
+                font-size: 30px;
             }
         }
         .articles__list {
@@ -14,6 +18,12 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                .list__title {
+                    h2 {
+                        color: $orange;
+                        font-size: 35px;
+                    }
+                }
                 .list__posts {
                     width: 100%;
                 }
@@ -85,8 +95,27 @@
         }
 }
 
+@media screen and (max-width: 968px) {
+    .articles {
+        padding-top: 100px;
+        width: 100%;
+        overflow: hidden;
+        .container {
+            flex-direction: column;
+            .articles__start {
+                h1 {
+                    font-size: 34px;
+                }
+                h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}
 .post__start, .content__text {
-    max-width: 1000px;
+    max-width: 830px;
 }
 
 @media (max-width: 1066px) {
@@ -94,12 +123,21 @@
         .container {
             .articles__list {
                 flex-wrap: wrap;
-                justify-content: center;
                 .list__posts {
                     width: 100%;
                     ul {
                         padding-left: 0px;
                     }
+                }
+            }
+        }
+    }
+    .header-article {
+        .container {
+            .article {
+                .article__text {
+                    width: auto!important;
+                    flex-wrap: wrap;
                 }
             }
         }
@@ -115,6 +153,17 @@
         .article {
             width: 100%;
             margin-bottom: 250px;
+            .article__start {
+                h1 {
+                    font-size: 86px
+                }
+                .article__subtitle {
+                    p, h2 {
+                        font-size: 26px;
+                    }
+                    max-width: 731px;
+                }
+            }
             .article__text {
                 display: flex;
                 justify-content: space-between;
@@ -124,6 +173,13 @@
                     &:nth-child(2) {
                         justify-content: center;
                         width: 100%;
+                    }
+                    .post__title {
+                        h2 {
+                            color: $orange;
+                            font-size: 35px;
+                            line-height: 17px;
+                        }
                     }
                     .post__start {
                         font-family: 'Poppins-Light';
@@ -179,6 +235,8 @@
             img {
                 margin: 0 auto;
                 margin-top: -200px;
+                max-width: 100%;
+                object-fit: cover;
             }
         }
         .pagination {
@@ -194,5 +252,25 @@
     strong {
         color: #000;
         font-family: 'Poppins-Bold';
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .header-article {
+        .container {
+            .article {
+                .article__start {
+                    h1 {
+                        font-size: 30px;
+                    }
+                    .article__subtitle {
+                        font-size: 18px;
+                        p, h2 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -17,20 +17,20 @@ body {
     font-family: 'Poppins-Bold', sans-serif;
 }
 
+::selection {
+    background-color: $specialFont;
+}
 @media screen and (max-width: 1367px) {
-    .header__welcome, .article__start, .article__text {
-        padding: 15px;
+    .header__welcome, .article__start, .article__text, .contact {
+        padding: 0px 15px;
     }
     section, article {
         .container {
-            padding: 15px;
+            padding: 0px 15px;
         }
     }
 }
 
-// @media screen and (max-width: 1024px) {
-//     .header 
-// }
 body {
     color: $normalFont;
 }
@@ -153,6 +153,7 @@ strong {
         display: flex;
         flex-direction: column;
         .header__btn {
+            margin-top: 50px;
             button {
                 background-color: $btnColor;
                 color: $normalFont;
@@ -196,7 +197,7 @@ strong {
     }
     .header__scrollDown {
         position: relative;
-        bottom: 150px;
+        bottom: 50px;
         a {
             &:hover {
                 span:nth-child(1) {
@@ -246,19 +247,19 @@ strong {
         border-right: 1px solid $borderColor;
     }
 }
-.blog {
-    &::after {
-        content: 'B';
-        font-size: 86px;
-    }
-}
+// .blog {
+//     &::after {
+//         content: 'B';
+//         font-size: 86px;
+//     }
+// }
 .aboutme {
     strong {
         color: #fff;
         font-family: 'Poppins-Bold';
     }
     .container {
-        padding-top: 80px;
+        padding-top: 102px;
         flex-direction: row;
         flex-wrap: wrap;
         .aboutme__main, .aboutme__extra {
@@ -314,6 +315,9 @@ strong {
 }
 .blog {
     .container {
+        &:nth-child(1) {
+            padding-top: 100px;
+        }
         .blog__title {
             margin-right: 97px;
             color: $orange;
@@ -389,7 +393,6 @@ strong {
             display: flex;
             width: 100%;
             margin-top: 102px;
-            margin-bottom: 150px;
             a {
                 display:flex;
                 justify-content: center;
@@ -430,6 +433,7 @@ strong {
     .container {
         flex-direction: column;
         overflow: hidden;
+        padding: 101px 0px;
         .contact__info {
             flex-wrap: wrap;
             display: flex;
@@ -613,7 +617,6 @@ strong {
         min-height: auto;
         padding-bottom: 40px;
         .header__bg {
-            
             background-size: 100%;
             background-position-y:20%;
             svg {
@@ -660,14 +663,6 @@ strong {
             padding-top: 20px;
         }
     }
-    .blog {
-        .container {
-            .blog__btn {
-                margin-top: 10px;
-                margin-bottom: 30px;
-            }
-        }
-    }
     
 }
 
@@ -691,26 +686,26 @@ strong {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;
-            height: 40px;
+            width: 31px;
+            height: 31px;
             flex-direction: column;
             position: absolute; 
-            right: 20px;
-            top: 30px;
+            right: 36px;
+            top: 40px;
             &:hover {
                 cursor: pointer;
             }
             span {
                 transition: .3s;
                 width: 100%;
-                height: 5px;
+                height: 1.5px;
                 background-color: #fff;
                 margin: 5px;
             }
         }
         .expanded {
             span:nth-child(1) {
-                transform: translateY(20px) rotate(45deg);
+                transform: translateY(14px) rotate(45deg);
             
             }
             span:nth-child(2) {
@@ -729,7 +724,9 @@ strong {
             justify-content: center;
             height: 100%;
             .navbar__logo {
-                width: 100%;
+                position: absolute;
+                top: 20px;
+                left: 21px;
                 a {
                     margin: 0 auto;
                     display: flex;
@@ -749,7 +746,10 @@ strong {
                     li {
                         margin: 9px 0px;
                         a {
-                            font-size: 26px;
+                            font-size: 35px;
+                            &:hover {
+                                color: $bgColor;
+                            }
                         }
                     }
                 }
