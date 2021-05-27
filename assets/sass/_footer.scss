@@ -1,0 +1,24 @@
+.footer {
+    .navbar {
+        background-color: transparent;
+        position: static;
+        
+    }
+    .container {
+        padding-left: 80px;
+        margin-left: 0px;
+        justify-content: space-around!important;
+        background-color: $specialFont;
+        .navbar__buttons {
+            .nav__links {
+                li {
+                    a {
+                        &:hover {
+                            color: $bgColor!important;
+                        }
+                    }
+                }  
+            }
+        }
+    }
+}

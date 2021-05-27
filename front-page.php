@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<body>
+<body class="main-page">
     <?php get_template_part('template-parts/navbar'); ?>
     <header class="header">
         <div class="header__bg">
@@ -162,7 +162,7 @@ get_header();
         </div>
         <div class="container">
             <div class="blog__btn">
-                <a href="">Zobacz więcej</a>
+                <a href="<?php echo get_page_link(get_page_by_title('Artykuły'));?>">Zobacz więcej</a>
             </div>
         </div>
     </section>
