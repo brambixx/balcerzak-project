@@ -78,15 +78,36 @@
                     
                     $published_posts = wp_count_posts()->publish;
                     $pages = ceil($published_posts / $posts_per_page);
-                    echo $paged;
-                    ?>
+                    $a = 1;
+                    ?> 
+                    <div class="articles__pagination">
+                        <?php 
+                            if ($ourCurrentPage == 1) : 
+                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'."Disabled".'</a>';
+                            else: 
+                                previous_posts_link('Poprzednia strona', $posts->max_num_pages);
+                            endif;
+                        ?>
+                        <?php while($a <= $pages) : 
+                            echo '<a href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'.$a.'</a>';
+                            $a++;
+                        endwhile;
+                        ?>
+                        <?php 
+                            if ($ourCurrentPage == $pages) : 
+                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'."Disabled".'</a>';
+                            else: 
+                                next_posts_link('Następna strona', $posts->max_num_pages);
+                            endif;
+                        ?>
+                    </div>
                     <?php endif;?>
                 </div>
             </div>
             <div class="articles__pagination">
-            <?php next_posts_link('Next page', $posts->max_num_pages);?>
-            <?php previous_posts_link('Poprzednia', $posts->max_num_pages);?>
-            <?php?>
+            <?php 
+                
+            ?>
             </div>
             	
             

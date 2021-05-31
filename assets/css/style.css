@@ -52,6 +52,10 @@ li {
   transition: .5s;
   text-decoration: none; }
 
+ul {
+  padding: 0;
+  list-style-type: none; }
+
 strong {
   color: #47BFA4; }
 
@@ -722,7 +726,16 @@ a {
       .article__content .container .content__text li, .article__content .container .content__text p, .article__content .container .content__text a, .article__content .container .content__text strong, .article__content .container .content__text ul {
         color: #000; }
       .article__content .container .content__text li {
-        list-style-type: circle; }
+        padding-left: 1.3em;
+        font-family: 'Poppins-Bold'; }
+        .article__content .container .content__text li::before {
+          content: '';
+          background-image: url("../img/list-icon.png");
+          background-repeat: no-repeat;
+          height: 1em;
+          display: inline-block;
+          margin-left: -1.3em;
+          width: 2em; }
       .article__content .container .content__text img {
         margin: 0 auto;
         margin-top: -200px;
