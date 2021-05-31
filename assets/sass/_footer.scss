@@ -22,3 +22,40 @@
         }
     }
 }
+
+@media screen and (min-width: 769px) {
+    .footer {
+        .container {
+            .navbar {
+                .navbar__logo {
+                    .logo__image {
+                        display: block;
+                    }
+                    .footer_disabled {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        .container {
+            background: #fff;
+            padding-left: 20px;
+            justify-content: flex-start!important;
+            .navbar__buttons {
+                display: none;
+            }
+            .navbar__logo {
+                .logo__image {
+                    display: none;
+                }
+                .footer_disabled {
+                    display: block!important;
+                }
+            }
+        }
+    }
+}

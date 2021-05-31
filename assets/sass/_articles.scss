@@ -1,7 +1,9 @@
+@import 'variables';
 .articles {
     padding-top: 100px;
     width: 100%;
     overflow: hidden;
+    @include articles-background;
     .container {
         flex-direction: column;
         .articles__start {
@@ -78,6 +80,7 @@
                         img {
                             z-index: -1;
                             width: 100%;
+                            height: 100%;
                             object-fit: cover;
                             transition: .5s;
                         }
@@ -91,6 +94,32 @@
         }
         .articles__pagination {
             text-align: center;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .current { 
+                color: $specialFont;
+            }
+            .disabled {
+                &:hover {
+                    cursor: default;
+                }
+            }
+            a {
+                margin: 0px 7.5px;
+                &:hover {
+                    color: $specialFont;
+                    svg {
+                        path {
+                            fill: $specialFont;
+                        }
+                    }
+                }
+                svg {
+                    margin: 0px 35px;
+                }
+            }
         }
         }
 }
@@ -103,6 +132,7 @@
         .container {
             flex-direction: column;
             .articles__start {
+                margin-top: 380px;
                 h1 {
                     font-size: 34px;
                 }
@@ -149,6 +179,8 @@
     overflow: hidden;
     padding-top: 100px;
     background-color: $bgColor;
+    min-height: 90vh;
+    @include articles-background;
     .container {
         .article {
             width: 100%;
@@ -242,11 +274,19 @@
             }
             display: flex;
             flex-direction: column;
-            img {
-                margin: 0 auto;
+            .content__featured {
                 margin-top: -200px;
-                max-width: 100%;
-                object-fit: cover;
+                max-height: 430px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                img {
+                    margin: 0 auto;
+                    max-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
             }
         }
         .pagination {
@@ -264,12 +304,12 @@
         font-family: 'Poppins-Bold';
     }
 }
-
 @media screen and (max-width: 968px) {
     .header-article {
         .container {
             .article {
                 .article__start {
+                    margin-top: 380px;
                     h1 {
                         font-size: 30px;
                     }

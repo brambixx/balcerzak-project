@@ -72,6 +72,7 @@ get_header();
                     <div class="aboutme__main">
                         <div class="main__title">
                             <h2>O mnie</h2>
+                            <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/about-me.png'?>" alt="">
                         </div>
                         <div class="main__desc">
                             <?php echo get_field('about-me'); ?>
@@ -98,8 +99,12 @@ get_header();
                    <?php 
                    if(have_rows('about-ceo')):
                     while(have_rows('about-ceo')):the_row();
-                ?>
-                    <img src="<?php echo get_sub_field('ceo-photo');?>" alt="Tomasz Balcerzak"/>
+                ?>  
+                    <div class="ceo__photo">
+                        <img class="ceo__bg" src="<?php echo get_stylesheet_directory_uri().'/assets/img/ceo_bg-1.png'?>" alt="">  
+                        <img class="ceo__bg" src="<?php echo get_stylesheet_directory_uri().'/assets/img/ceo_bg.png'?>" alt="">
+                        <img class="ceo__img" src="<?php echo get_sub_field('ceo-photo');?>" alt="Tomasz Balcerzak"/>
+                    </div>
                     <?php echo get_sub_field('ceo-signature')?>
                     <?php endwhile;
                 endif;?>
@@ -111,6 +116,7 @@ get_header();
         <div class="container">
             <div class="blog__title">
                 <h2>Blog</h2>
+                <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">
             </div>
             <div class="blog__list">
                 <?php
@@ -162,7 +168,7 @@ get_header();
         </div>
         <div class="container">
             <div class="blog__btn">
-                <a href="<?php echo get_page_link(get_page_by_title('Artykuły'));?>">Zobacz więcej</a>
+                <a href="<?php echo get_post_type_archive_link('post');?>">Zobacz więcej</a>
             </div>
         </div>
     </section>
@@ -173,6 +179,7 @@ get_header();
                     <h2>
                         Kontakt
                     </h2>
+                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/contact.png'?>" alt="">
                 </div>
                 <div class="contact__desc">
                     <?php $phone_number = get_field('phone_number');

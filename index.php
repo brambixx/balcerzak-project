@@ -22,6 +22,7 @@
             <div class="articles__list">
                 <div class="list__title">
                     <h2>Blog</h2>
+                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">
                 </div>
                 <div class="list__posts">
                     <?php 
@@ -33,7 +34,7 @@
                         'post_type' => 'post',
                         'posts_per_page' => $posts_per_page,
                         'orderby' => 'date',
-                        'order' => 'ASC',
+                        'order' => 'DESC',
                         'paged' => $ourCurrentPage
                     ));
                     
@@ -83,21 +84,36 @@
                     <div class="articles__pagination">
                         <?php 
                             if ($ourCurrentPage == 1) : 
-                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'."Disabled".'</a>';
+                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/"><svg style="transform:rotate(-90deg)" class="disabled" xmlns="http://www.w3.org/2000/svg" width="23.49" height="54.738" viewBox="0 0 23.49 54.738">
+                                    <path d="M812.972,267.419l9.162-9.162v50.527a.954.954,0,0,0,1.908,0V258.256l9.162,9.162a.954.954,0,0,0,1.349-1.349l-10.789-10.791a.957.957,0,0,0-1.351,0L811.623,266.07a.954.954,0,0,0,1.349,1.349Z" transform="translate(-811.343 -255)" fill="#47BFA4"/>
+                                  </svg></a>';
                             else: 
-                                previous_posts_link('Poprzednia strona', $posts->max_num_pages);
+                                previous_posts_link('<svg style="transform:rotate(-90deg)" xmlns="http://www.w3.org/2000/svg" width="23.49" height="54.738" viewBox="0 0 23.49 54.738">
+                                    <path d="M812.972,267.419l9.162-9.162v50.527a.954.954,0,0,0,1.908,0V258.256l9.162,9.162a.954.954,0,0,0,1.349-1.349l-10.789-10.791a.957.957,0,0,0-1.351,0L811.623,266.07a.954.954,0,0,0,1.349,1.349Z" transform="translate(-811.343 -255)" fill="#fff"/>
+                                  </svg>', $posts->max_num_pages);
                             endif;
                         ?>
                         <?php while($a <= $pages) : 
-                            echo '<a href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'.$a.'</a>';
+                            if ($a == $ourCurrentPage) : 
+                                echo '<a href="'.get_post_type_archive_link('post').'/page/'.$a.'/" class="current">'.$a.'</a>';
+                            else: 
+                                echo '<a href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'.$a.'</a>';
+                            endif;
                             $a++;
                         endwhile;
                         ?>
                         <?php 
                             if ($ourCurrentPage == $pages) : 
-                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/">'."Disabled".'</a>';
+                                echo '<a class="disabled" href="'.get_post_type_archive_link('post').'/page/'.$a.'/">
+                                <svg style="transform:rotate(90deg)" class="disabled" xmlns="http://www.w3.org/2000/svg" width="23.49" height="54.738" viewBox="0 0 23.49 54.738">
+                                <path d="M812.972,267.419l9.162-9.162v50.527a.954.954,0,0,0,1.908,0V258.256l9.162,9.162a.954.954,0,0,0,1.349-1.349l-10.789-10.791a.957.957,0,0,0-1.351,0L811.623,266.07a.954.954,0,0,0,1.349,1.349Z" transform="translate(-811.343 -255)" fill="#47BFA4"/>
+                              </svg>                              
+                                </a>';
                             else: 
-                                next_posts_link('Następna strona', $posts->max_num_pages);
+                                next_posts_link('<svg style="transform:rotate(90deg)" xmlns="http://www.w3.org/2000/svg" width="23.49" height="54.738" viewBox="0 0 23.49 54.738">
+                                <path d="M812.972,267.419l9.162-9.162v50.527a.954.954,0,0,0,1.908,0V258.256l9.162,9.162a.954.954,0,0,0,1.349-1.349l-10.789-10.791a.957.957,0,0,0-1.351,0L811.623,266.07a.954.954,0,0,0,1.349,1.349Z" transform="translate(-811.343 -255)" fill="#fff"/>
+                              </svg>
+                              ', $posts->max_num_pages);
                             endif;
                         ?>
                     </div>

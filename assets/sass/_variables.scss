@@ -1,3 +1,6 @@
-button {
-    height: 30px;
+@mixin articles-background {
+    background-image: url(../img/all-articles_bg.png);
+    background-repeat: no-repeat;
+    background-position-y: 105px;
+    background-size: 100%;
 }

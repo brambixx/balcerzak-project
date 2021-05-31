@@ -24,6 +24,7 @@
                 <div class="article__post">
                     <div class="post__title">
                         <h2>Blog</h2>
+                        <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">
                     </div>
                 </div>
                 <div class="article__post">
@@ -39,7 +40,9 @@
        
         <div class="container">
             <div class="content__text">
-                <?php the_post_thumbnail();?>
+                <div class="content__featured">
+                    <?php the_post_thumbnail();?>
+                </div>
                 <?php the_content();?>
             </div>
             <div class="pagination">
