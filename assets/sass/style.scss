@@ -32,11 +32,13 @@ body {
 }
 
 body {
+    overflow-x: hidden;
     color: $normalFont;
 }
 .main-page, .articles-page {
     
     background-color: $bgColor;
+    
 }
 a,
 ul,
@@ -272,6 +274,34 @@ strong {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .aboutme, .blog, .contact {
+        position: relative;
+        &::before {
+            display: none;
+            position: absolute;
+            content:'';
+            width: 25%;
+            z-index:-1;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-right: 1px solid $borderColor;
+        }
+        &::after {
+            display: none;
+            position: absolute;
+            content:'';
+            width: 25%;
+            z-index: -1;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            border-left: 1px solid $borderColor;
+            border-right: 1px solid $borderColor;
+        }
+    }
+}
 .aboutme {
     strong {
         color: #fff;
