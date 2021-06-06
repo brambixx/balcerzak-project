@@ -5,6 +5,7 @@ const navMobile = document.querySelector('.navbar__mobile')
 const expandMenu = () => {
     navMobile.classList.toggle('expanded');
     nav.classList.toggle('mobile_menu');
+    document.querySelector('body').classList.toggle('showMenu');
 }
 
 navMobile.addEventListener('click', expandMenu);

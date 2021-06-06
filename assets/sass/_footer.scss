@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     .navbar {
         background-color: transparent;
         position: static;
@@ -20,10 +21,23 @@
             }
         }
     }
+    .scrollUp {
+        position: absolute;
+        right: 100px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        svg {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 @media screen and (min-width: 769px) {
     .footer {
+        .scrollUp {
+            top: -100px
+        }
         .container {
             .navbar {
                 .navbar__logo {
@@ -39,13 +53,31 @@
     }
 }
 
+@media screen and (min-width: 1610px) {
+    .footer {
+        .scrollUp {
+            top: -74px;
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     .footer {
+        overflow: hidden;
+        .scrollUp {
+            top: 0px;
+            right: 36px;
+            svg {
+                width: 29px;
+            }
+        }
         .container {
             background: transparent;
             padding-left: 15px;
             justify-content: flex-start!important;
             .navbar__buttons {
+                display: none;
+            }
+            .navbar__mobile {
                 display: none;
             }
         }

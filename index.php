@@ -8,7 +8,10 @@
     ?>
 <body class="articles-page">
     <?php get_template_part('template-parts/navbar');?>
-    <section class="articles">
+    <section class="articles" id="header">
+        <div class="bg">
+            <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/my-articles_bg.png'?>" alt="">
+        </div>
         <div class="container"> 
             <div class="articles__start">
                 <h1>
@@ -20,6 +23,10 @@
                 </h2>
             </div>
             <div class="articles__list">
+                <div class="list__bg">
+                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/list_bg.png'?>" alt="">
+                    <h1 class="bg__text">Blog</h1>
+                </div>
                 <div class="list__title">
                     <h2>Blog</h2>
                     <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">

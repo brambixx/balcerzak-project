@@ -8,7 +8,7 @@ get_header();
 
 <body class="main-page">
     <?php get_template_part('template-parts/navbar'); ?>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__bg">
             <div class="bg__tb">
                 <svg xmlns="http://www.w3.org/2000/svg" width="480.411" height="601.714" viewBox="0 0 480.411 601.714">
@@ -45,7 +45,7 @@ get_header();
                 </div>
             </div>
             <div class="header__scrollDown">
-                <a href="#" id="scrollDown">
+                <a href="#about-me" id="scrollDown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="49.127" height="77.722" viewBox="0 0 49.127 77.722">
                     <g id="Group_149" data-name="Group 149" transform="translate(1667.905 4173.809) rotate(180)">
                     <g id="Path_55" data-name="Path 55" transform="translate(1618.778 4124.683)" fill="none">

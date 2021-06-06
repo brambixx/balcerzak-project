@@ -9,7 +9,6 @@
 @import 'footer';
 html,
 body {
-    
     scroll-behavior: smooth;
     padding: 0;
     margin: 0;
@@ -17,16 +16,19 @@ body {
     font-family: 'Poppins-Bold', sans-serif;
 }
 
+.showMenu {
+    overflow: hidden;
+}
 ::selection {
     background-color: $specialFont;
 }
 @media screen and (max-width: 1367px) {
     .header__welcome, .article__start, .article__text, .contact {
-        padding: 0px 15px;
+        padding: 0px 37px;
     }
     section, article {
         .container {
-            padding: 0px 15px;
+            padding: 0px 36px;
         }
     }
 }
@@ -382,7 +384,6 @@ strong {
             padding-top: 100px;
         }
         .blog__title {
-            margin-right: 97px;
             color: $orange;
            h2 {
                font-size: 35px;
@@ -395,13 +396,17 @@ strong {
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
+                justify-content: center;
             }
             li {
                 display: flex;
                 flex-wrap: wrap;
                 max-width: 480px;
                 width: 100%;
+                position: relative;
                 max-height: 440px;
+                
+                
                 .blog__article {
                     position: relative;
                     height: 100%;
@@ -633,7 +638,7 @@ strong {
     }
 }
 
-@media screen and (max-width: 1143px) {
+@media screen and (max-width: 1185px) {
     .main__title, .blog__title, .contact__title, .list__title, .post__title {
         flex-direction: row;
         align-items: center!important;
