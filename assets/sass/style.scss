@@ -33,6 +33,16 @@ body {
     }
 }
 
+@media screen and (max-width: 387px) {
+    .header__wlecome, .article__start, .article__text, .contact {
+        padding: 0px 10px;
+    }
+    section, article {
+        .container {
+            padding: 0px 10px;
+        }
+    }
+}
 body {
     overflow-x: hidden;
     color: $normalFont;
@@ -362,12 +372,12 @@ strong {
                     .ceo__bg {
                         position: absolute;
                         &:nth-of-type(1) {
-                            top: 98px;
+                            top: 10%;
                             left: -38px;
                         }
                         &:nth-of-type(2) {
-                            bottom: 132px;
-                            right: -52px;
+                            bottom: 23%;
+                            right: -36px;
                         }
                     }
                 }
@@ -419,6 +429,7 @@ strong {
                         height: 100%;
                         width: 100%;
                         display: flex;
+                        text-align: center;
                         justify-content: center;
                         align-items: center;
                         flex-direction: column;
@@ -531,6 +542,7 @@ strong {
                 }
             }
             .contact__desc {
+                word-break: break-all;
                 .contact__address {
                     line-height: 17px;
                     margin-left: 90px;
@@ -795,19 +807,20 @@ strong {
         }
     }
     .mobile_menu {
-        height: 100vh!important;
+        height: 100%!important;
         background-color: $mobileMenu;
         background-image: url(../img/all-articles_bg.png);
         background-position-y: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
-        position: sticky;
+        position: fixed;
         top:0;
         left:0;
         .container {
             flex-direction: column;
             justify-content: center;
             height: 100%;
+            padding: 0px 15px;
             .navbar__logo {
                 position: absolute;
                 top: 20px;
@@ -883,6 +896,11 @@ strong {
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 387px) {
+    .header .header__bg .bg__text-mobile {
+        display: none;
     }
 }
 

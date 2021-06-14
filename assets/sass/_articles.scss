@@ -269,11 +269,11 @@
             width: 100%;
             margin-bottom: 250px;
             .bg {
-                position: absolute;
-                right: -260px;
+                position: relative;
                 
                 img {
-                    width: 100%;
+                    position: absolute;
+                    right: -25%;
                     transition: .4s;
                 }
             }
@@ -460,8 +460,11 @@
     .header-article {
         .container {
             .article {
+                .bg {
+                    top: -50%;
+                }
                 .article__start {
-                    margin-top: 469px;
+                    margin-top: 340px;
 
                     h1 {
                         font-size: 34px;
@@ -479,6 +482,25 @@
             }
         }
     }
+}
+@media screen and (max-width: 685px) {
+    .header-article {
+        .container {
+            .article {
+                .bg {
+                    top: -200px;
+                    img {
+                        right: -100px;
+                        width: 100%;
+                    }
+                }
+                .article__start {
+                    margin-top: 120px;
+                }
+            }
+        }
+    }
+                    
 }
 @media screen and (max-width: 1367px) {
     .article__content {
