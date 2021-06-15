@@ -180,6 +180,7 @@ strong {
         height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         .header__btn {
             margin-top: 50px;
             margin-bottom: 40px;
@@ -226,7 +227,6 @@ strong {
     }
     .header__scrollDown {
         position: relative;
-        bottom: 50px;
         a {
             &:hover {
                 span:nth-child(1) {
@@ -570,21 +570,9 @@ strong {
 @media screen and (max-height: 840px) {
     .header {
         height: auto;
-        .container {
-            .header__scrollDown {
-                bottom: 0px;
-            }
-        }
     }
 }
 @media screen and (max-width: 1367px) {
-    .header {
-        .container {
-            .header__scrollDown {
-                bottom: 30px;
-            }
-        }
-    }
     .aboutme {
         .container {
             .aboutme__main, .aboutme__extra {
@@ -740,7 +728,6 @@ strong {
                 }
             }
             .header__scrollDown {
-                bottom: 0px;
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -866,6 +853,7 @@ strong {
         }
     }
 }
+
 @media screen and (max-width: 567px) {
     .header {
         .container {
