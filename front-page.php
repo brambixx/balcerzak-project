@@ -43,8 +43,7 @@ get_header();
                 <div class="header__btn">
                     <button>Zobacz ofertę</button>
                 </div>
-            </div>
-            <div class="header__scrollDown">
+                <div class="header__scrollDown">
                 <a href="#about-me" id="scrollDown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="49.127" height="77.722" viewBox="0 0 49.127 77.722">
                     <g id="Group_149" data-name="Group 149" transform="translate(1667.905 4173.809) rotate(180)">
@@ -63,6 +62,8 @@ get_header();
                 </div>
                 </a>
             </div>
+            </div>
+           
         </div>
     </header>
     <section id="about-me" class="aboutme">
@@ -186,7 +187,12 @@ get_header();
                         $phone_number = chunk_split($phone_number, 3, ' ');
                     ?>
                     <h2><?php echo $phone_number;?></h2>
-                    <h2><?php echo get_field('mail');?></h2>
+                    <a href="mailto:<?php echo get_field('mail')?>">
+                        <h2>    
+                            <?php echo get_field('mail');?>
+                        
+                        </h2>
+                    </a>
                     <a href="<?php echo get_field('linkedin_href')?>">
                         <h2>
                             in
@@ -199,7 +205,7 @@ get_header();
                     <h3>Jak dojechać</h3>
                 </div>
                 <div class="contact__map">
-                    <!-- <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/map.png'?>" alt=""> -->
+                    
                 </div>
             </div>
             <div class="contact__info">
@@ -208,7 +214,10 @@ get_header();
                 </div>
                 <div class="contact__desc">
                     <h2 class="contact__address">
-                        <?php echo get_field('company_address')?>
+                        ul. <?php echo get_field('company_street');?>
+                    </h2>
+                    <h2 class="contact__address">
+                        <?php echo get_field('company_post_code');?>
                     </h2>
                 </div>
             </div>
