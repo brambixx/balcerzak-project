@@ -853,7 +853,24 @@ strong {
         }
     }
 }
-
+@media screen and (max-width: 450px) {
+    .aboutme {
+        .container {
+            .content {
+                .aboutme__img {
+                    .ceo__photo {
+                        .ceo__bg {
+                            &:nth-of-type(2) {
+                                right: -15px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 567px) {
     .header {
         .container {

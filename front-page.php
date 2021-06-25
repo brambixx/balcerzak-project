@@ -72,7 +72,7 @@ get_header();
                 <div class="aboutme__description">
                     <div class="aboutme__main">
                         <div class="main__title">
-                            <h2>O mnie</h2>
+                            <h2><?php echo get_field('aboutme_title');?></h2>
                             <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/about-me.png'?>" alt="">
                         </div>
                         <div class="main__desc">
@@ -81,7 +81,7 @@ get_header();
                     </div>
                     <div class="aboutme__extra">
                         <div class="extra__title">
-                            <h3>Co oferuję?</h3>
+                            <h3><?php echo get_field('offer_title');?></h3>
                         </div>
                         <div class="extra__desc">
                             <?php echo get_field('about-offer'); ?>
@@ -89,7 +89,7 @@ get_header();
                     </div>
                     <div class="aboutme__extra">
                         <div class="extra__title">
-                            <h3>Co zyskujesz?</h3>
+                            <h3><?php echo get_field('profit_title');?></h3>
                         </div>
                         <div class="extra__desc">
                             <?php echo get_field('about-profit'); ?>
@@ -116,7 +116,7 @@ get_header();
     <section class="blog" id="blog">
         <div class="container">
             <div class="blog__title">
-                <h2>Blog</h2>
+                <h2><?php echo get_field('blog_title');?></h2>
                 <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">
             </div>
             <div class="blog__list">
@@ -169,7 +169,7 @@ get_header();
         </div>
         <div class="container">
             <div class="blog__btn">
-                <a href="<?php echo get_post_type_archive_link('post');?>">Zobacz więcej</a>
+                <a href="<?php echo get_post_type_archive_link('post');?>"><?php echo get_field('articles_button');?></a>
             </div>
         </div>
     </section>
@@ -178,7 +178,7 @@ get_header();
             <div class="contact__info">
                 <div class="contact__title">
                     <h2>
-                        Kontakt
+                        <?php echo get_field('contact_title');?>
                     </h2>
                     <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/contact.png'?>" alt="">
                 </div>
@@ -194,7 +194,7 @@ get_header();
                         </h2>
                     </a>
                     <a href="<?php echo get_field('linkedin_href')?>">
-                        <h2>
+                        <h2 class="linkedin">
                             in
                         </h2>
                     </a>
@@ -202,11 +202,10 @@ get_header();
             </div>
             <div class="contact__info map__info">
                 <div class="contact__title">
-                    <h3>Jak dojechać</h3>
+                    <h3><?php echo get_field('whereto_title');?></h3>
                 </div>
-                <div class="contact__map">
-                    
-                </div>
+				<a href="https://www.google.com/maps/place/Marsza%C5%82kowska+94,+05-800+Warszawa/@52.2288059,21.010774,17z/data=!3m1!4b1!4m5!3m4!1s0x471eccf23711845b:0xde13c3952c2f7782!8m2!3d52.2288059!4d21.0129627" class="map" target="_blank"><div class="contact__map">
+					</div></a>
             </div>
             <div class="contact__info">
                 <div class="contact__title">

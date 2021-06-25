@@ -15,17 +15,16 @@
         <div class="container"> 
             <div class="articles__start">
                 <h1>
-                    Moje artykuły
+                    <?php echo get_field('articles_welcome-title');?>
                 </h1>
                 <h2>
-                    Pisze o <strong>project managament</strong> 
-                    na moim bloku u styku zarządzania i nauki.
+                   <?php echo get_field('articles_welcome_subtitle');?>
                 </h2>
             </div>
             <div class="articles__list">
                 <div class="list__bg">
                     <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/list_bg.png'?>" alt="">
-                    <h1 class="bg__text">Blog</h1>
+                    <h1 class="bg__text"><?php echo get_field('blog_list_title');?></h1>
                 </div>
                 <div class="list__title">
                     <h2>Blog</h2>

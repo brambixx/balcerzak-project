@@ -673,6 +673,10 @@ a {
               .mobile_menu .container .navbar__buttons .nav__links li a:hover {
                 color: #111235; } }
 
+@media screen and (max-width: 450px) {
+  .aboutme .container .content .aboutme__img .ceo__photo .ceo__bg:nth-of-type(2) {
+    right: -15px; } }
+
 @media screen and (max-width: 567px) {
   .header .container .header__welcome .header__btn button {
     width: 100%; }
