@@ -9,7 +9,8 @@
 
     function balcerzak_menu() {
         $locations = array(
-            'primary' => 'Główne menu'
+            'primary' => 'Główne menu',
+            'secondary' => 'Footer menu'
         );
         register_nav_menus($locations);
     }

@@ -194,21 +194,10 @@ strong {
                 overflow: hidden;
                 transition: .3s;
                 position: relative;
-                &::after {
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: $btnColorHover;
-                    transition: .3s;
-                    content: 'Zobacz ofertę';
-                }
+                
                 &:hover {
                     cursor: pointer;
+                    background-color: $btnColorHover;
                     &::after {
                         top: 0;
                     }
@@ -746,6 +735,16 @@ strong {
     .navbar {
         .navbar__buttons {
             display: flex;
+            .nav__links {
+                .nav__button {
+                    a {
+                        img {
+                            width: 95px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
         }
         .navbar__mobile {
             display: none;

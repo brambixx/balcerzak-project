@@ -41,7 +41,18 @@ get_header();
                     </h2>
                 </div>
                 <div class="header__btn">
-                    <button>Zobacz ofertę</button>
+                    <button>
+                        <?php 
+                            $header_link = get_field('header_button');
+                            if ($header_link):
+                                $header_link_url = $header_link['url'];
+                                $header_link_title = $header_link['title'];
+                        ?>
+                        <a href="<?php echo esc_url($header_link_url);?>">
+                            <?php echo esc_html($header_link_title);?>
+                        </a>
+                        <?php endif;?>
+                    </button>
                 </div>
                 <div class="header__scrollDown">
                 <a href="#about-me" id="scrollDown">
@@ -73,7 +84,7 @@ get_header();
                     <div class="aboutme__main">
                         <div class="main__title">
                             <h2><?php echo get_field('aboutme_title');?></h2>
-                            <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/about-me.png'?>" alt="">
+                            <img src="<?php echo get_field('aboutme_title_image')?>" alt="">
                         </div>
                         <div class="main__desc">
                             <?php echo get_field('about-me'); ?>
@@ -117,7 +128,7 @@ get_header();
         <div class="container">
             <div class="blog__title">
                 <h2><?php echo get_field('blog_title');?></h2>
-                <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/blog.png'?>" alt="">
+                <img src="<?php echo get_field('blog_title_image')?>" alt="">
             </div>
             <div class="blog__list">
                 <?php
@@ -180,7 +191,7 @@ get_header();
                     <h2>
                         <?php echo get_field('contact_title');?>
                     </h2>
-                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/contact.png'?>" alt="">
+                    <img src="<?php echo get_field('contact_title_image')?>" alt="">
                 </div>
                 <div class="contact__desc">
                     <?php $phone_number = get_field('phone_number');
@@ -209,7 +220,7 @@ get_header();
             </div>
             <div class="contact__info">
                 <div class="contact__title">
-                    <h3>Adres</h3>
+                    <h3><?php echo get_field('company_title');?></h3>
                 </div>
                 <div class="contact__desc">
                     <h2 class="contact__address">
