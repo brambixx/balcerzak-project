@@ -17,4 +17,6 @@ If you want to see how it does look as client's view:
 - off course, make sure you have opened xampp/docker to launch 
 - login: @test63bQO, password in private message. 
 
+DB: balcerzak.sql
+
 Have fun! 
